@@ -1,0 +1,27 @@
+name: "2 - CI Pipeline"
+
+on:
+  workflow_dispatch:
+  push:
+
+# Set working directory to directory used for this step of the investigation
+defaults:
+  run:
+    working-directory: 2-ci-pipeline/playwright/
+
+jobs:
+  test_playwright:
+    name: Playwright
+    runs-on: ubuntu-20.04
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install dependencies
+        run: npm ci
+      - name: Install playwright browsers
+        run: npx playwright install --with-deps
+      - name: Run tests
+        run: npx playwright test
