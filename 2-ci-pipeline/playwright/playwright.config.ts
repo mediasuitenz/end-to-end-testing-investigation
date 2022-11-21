@@ -48,10 +48,9 @@ const config: PlaywrightTestConfig = {
       name: 'chromium',
       use: {
         ...devices['Desktop Chrome'],
+      },
     },
-},
-
-{
+    {
     name: 'firefox',
     use: {
         ...devices['Desktop Firefox'],
@@ -63,14 +62,12 @@ const config: PlaywrightTestConfig = {
         },
       },
     },
-
     {
       name: 'webkit',
       use: {
         ...devices['Desktop Safari'],
       },
     },
-
     /* Test against mobile viewports. */
     {
       name: 'Mobile Chrome',
@@ -84,7 +81,6 @@ const config: PlaywrightTestConfig = {
         ...devices['iPhone 12'],
       },
     },
-
     /* Test against branded browsers. */
     {
       name: 'Microsoft Edge',
