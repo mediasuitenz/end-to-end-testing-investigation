@@ -4,6 +4,20 @@ This repository contains tests for end to end testing for Media Suite.
 
 *Note: Any GitHub Actions workflow files for a step in the investigation are located within the `.github/` directory.*
 
+## 0 - Install and setup
+
+Install npm dependencies
+
+    npm install
+
+Install playwright
+
+```
+npx playwright install
+npx playwright install msedge
+```
+
+
 ## 1 - Basic Tests
 
 The purpose of this directory is to write simple tests for an already deployed website (in this case, the [Media Suite website](https://www.mediasuite.co.nz/)).
